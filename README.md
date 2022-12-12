@@ -9,3 +9,12 @@ Additionally, it may enable transcription to be done more quickly and easily tha
  Imagine you have just recorded a video and you want to edit it before uploading it. There are a few ways to fix the problem. To name a few you can record an entire new video or you can record only the part you want to change and then combine it with the original video. A lot of time while recording an interview or video about yourself we tend to use filler words like “aa”, “..uhmm”, etc and while uploading the video or before sharing it with anyone we want to get rid of these words. There are times where we want to redact PII, identify topics, and remove sensitive content.
 
 As a solution to the aforementioned problem statement, we propose in this project an all-in-one collaborative AI audio and video editing application that is as simple to use as editing a Google Doc based on text extracted from transcription. Even inexperienced users with no editing skills can edit with AI like a pro with this approach. Our proposed AI tool would offer fantastic features such as automatic transcription from audio, the ability to remove filler words with the click of a button,which makes editing your recorded audio as simple as typing, and the addition of speaker labels. Our solution entails identifying and comprehending all available cutting-edge state-of-the-art(SOTA) models like OPenAI whisper and attempting transfer learning for real-time voice cloning from existing text-speech models in research, and developing an end-to-end ML product for our solution domain.
+
+
+
+
+## DEPLOYMENT LINK:
+Deployment url: https://huggingface.co/spaces/AvinashRamesh23/AIEditor
+
+Hugging Face Spaces make it easy for you to create and deploy ML-powered demos. 
+Deployment Repo: https://huggingface.co/spaces/AvinashRamesh23/AIEditor/tree/main
