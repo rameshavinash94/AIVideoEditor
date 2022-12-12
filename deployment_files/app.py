@@ -280,7 +280,7 @@ def download_redact_audio(pooling_enpoint):
       "content-type": "application/json",
   }
 
-  redacted_audio_response = requests.get(polling_endpoint + "/redacted-audio",headers=headers)
+  redacted_audio_response = requests.get(pooling_enpoint + "/redacted-audio",headers=headers)
   print(redacted_audio_response.json())
   redacted_audio = requests.get(redacted_audio_response.json()['redacted_audio_url'])
   with open('redacted_audio.mp3', 'wb') as f:
@@ -315,18 +315,19 @@ async def main(uploaded_video,model_selected):
       with tab1:
         filler_word = st.button('Edit/Remove Filler Words with a click of a button')
         if filler_word:
-          word_map_after_edit, filler_words_timestamp = filler_words_finder(result)
-          final_intervals = merge_overlapping_time_intervals(sorted(list(word_map_after_edit)))
-          subclips=[]
-          for start,end in final_intervals:
-              clip = VideoFileClip(vid)
-              tmp = clip.subclip(start,(end - end*0.1))
-              print(start,end,tmp.duration)
-              subclips.append(tmp)
-          #concatenate subclips without filler words
-          final_clip = concatenate_videoclips(subclips)
-          final_clip.write_videofile(f"remove_{vid}")
-          preview = st.video(f"remove_{vid}")
+          with st.spinner(text="In progress..."):
+              word_map_after_edit, filler_words_timestamp = filler_words_finder(result)
+              final_intervals = merge_overlapping_time_intervals(sorted(list(word_map_after_edit)))
+              subclips=[]
+              for start,end in final_intervals:
+                  clip = VideoFileClip(vid)
+                  tmp = clip.subclip(start,(end - end*0.1))
+                  print(start,end,tmp.duration)
+                  subclips.append(tmp)
+              #concatenate subclips without filler words
+              final_clip = concatenate_videoclips(subclips)
+              final_clip.write_videofile(f"remove_{vid}")
+              preview = st.video(f"remove_{vid}")
 
       with tab2:
         save = st.button('Edit')
@@ -339,8 +340,9 @@ async def main(uploaded_video,model_selected):
       with tab4:
         identify_download_speaker = st.button('Perform Speaker Diarization')
         if identify_download_speaker:
-          results  = await speaker_diarization(vid)
-          download_speaker = st.download_button("download speaker_diarization",results,'diarization_stats.txt')
+          with st.spinner(text="In progress..."):
+              results  = await speaker_diarization(vid)
+              download_speaker = st.download_button("download speaker_diarization",results,'diarization_stats.txt')
           if download_speaker:
             st.write('Thanks for downloading!')
 
@@ -348,21 +350,22 @@ async def main(uploaded_video,model_selected):
         type = st.selectbox('Summary Type?',('informative', 'conversational', 'catchy'))
         Analyze_content = st.button("Start Content Analysis")
         if Analyze_content:
-          audio = extract_write_audio(vid)
-          audio_url = upload_to_AssemblyAI("audio.wav")
-          # start analysis of the file
-          polling_endpoint = start_analysis(audio_url,type)
-          # receive the results
-          results = get_analysis_results(polling_endpoint)
-
-          # separate analysis results
-          summary = results.json()['summary']
-          content_moderation = results.json()["content_safety_labels"]
-          topic_labels = results.json()["iab_categories_result"]
-
-          my_expander1 = st.expander(label='Summary')
-          my_expander2 = st.expander(label='Content Moderation')
-          my_expander3 = st.expander(label='Topic Discussed')
+          with st.spinner(text="In progress..."):
+              audio = extract_write_audio(vid)
+              audio_url = upload_to_AssemblyAI("audio.wav")
+              # start analysis of the file
+              polling_endpoint = start_analysis(audio_url,type)
+              # receive the results
+              results = get_analysis_results(polling_endpoint)
+    
+              # separate analysis results
+              summary = results.json()['summary']
+              content_moderation = results.json()["content_safety_labels"]
+              topic_labels = results.json()["iab_categories_result"]
+    
+              my_expander1 = st.expander(label='Summary')
+              my_expander2 = st.expander(label='Content Moderation')
+              my_expander3 = st.expander(label='Topic Discussed')
 
           with my_expander1:
             st.header("Video summary")
@@ -391,14 +394,15 @@ async def main(uploaded_video,model_selected):
         options = st.multiselect('Select Policies to redact from video',["medical_process","medical_condition","blood_type","drug","injury","number_sequence","email_address","date_of_birth","phone_number","us_social_security_number","credit_card_number","credit_card_expiration","credit_card_cvv","date","nationality","event","language","location","money_amount","person_name","person_age","organization","political_affiliation","occupation","religion","drivers_license","banking_information"],["person_name", 'credit_card_number'])
         Perform_redact = st.button("Start PII Redaction")
         if Perform_redact:
-          audio = extract_write_audio(vid)
-          audio_url = upload_to_AssemblyAI("audio.wav")
-          print(audio_url)
-          print([ x for x in options ])
-          polling_endpoint = pii_redact(audio_url,options)
-          results  = pii_redact_audio(polling_endpoint)
-          download_redact_audio(polling_endpoint)
-          redact_audio_video_display(vid,"redacted_audio.mp3")
+            with st.spinner(text="In progress..."):
+              audio = extract_write_audio(vid)
+              audio_url = upload_to_AssemblyAI("audio.wav")
+              print(audio_url)
+              print([ x for x in options ])
+              polling_endpoint = pii_redact(audio_url,options)
+              results  = pii_redact_audio(polling_endpoint)
+              download_redact_audio(polling_endpoint)
+              redact_audio_video_display(vid,"redacted_audio.mp3")
 
 Model_type = st.sidebar.selectbox("Choose Model",('Tiny - Best for Srt generation', 'Base - Best suited for various AI services', 'Medium - Use this model for filler word removal'),0)
 upload_video = st.sidebar.file_uploader("Upload mp4 file",type=["mp4","mpeg"])
