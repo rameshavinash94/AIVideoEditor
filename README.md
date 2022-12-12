@@ -1,4 +1,4 @@
-# POC - AIVideoEditor for removing filler words based on transcript, generating SRT, 
+# POC - AIVideoEditor with features -  removing filler words based on transcript, generating SRT, Redact PII, Content Analyzer - Summary, Topic Modelling, Sensitivity.
 
 ## POC for creating a AI Video Editor for Content Creators with Various Capabilities.
 
