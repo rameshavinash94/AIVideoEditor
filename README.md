@@ -59,7 +59,7 @@ Speakers will be labeled as Speaker 0, Speaker 1, etc.
 - **SRT GENERATION** 
 <img width="786" alt="Screen Shot 2022-12-12 at 1 25 10 AM" src="https://user-images.githubusercontent.com/87649563/207009317-914d870f-0b87-4cad-ae0f-ea9d33231b37.png">
 
-** GENERATED SRT FILE : **
+**GENERATED SRT FILE:**
 
 https://github.com/rameshavinash94/AIVideoEditor/blob/main/Artifacts/30%20Second%20Elevator%20Pitch.srt
 
