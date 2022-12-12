@@ -115,4 +115,7 @@ Deployment Repo: https://huggingface.co/spaces/AvinashRamesh23/AIEditor/tree/mai
 COLAB: https://github.com/rameshavinash94/AIVideoEditor/blob/main/colabs/Streamlit_Application.ipynb
 
 
+
 ## TEAM PRESENTATION VIDEO:
+
+https://user-images.githubusercontent.com/87649563/207011452-7fd9e377-e9a8-4c95-8c44-df8a2fae7e77.mp4
