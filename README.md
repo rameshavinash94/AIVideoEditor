@@ -17,4 +17,5 @@ As a solution to the aforementioned problem statement, we propose in this projec
 Deployment url: https://huggingface.co/spaces/AvinashRamesh23/AIEditor
 
 Hugging Face Spaces make it easy for you to create and deploy ML-powered demos. 
+
 Deployment Repo: https://huggingface.co/spaces/AvinashRamesh23/AIEditor/tree/main
