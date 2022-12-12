@@ -1,0 +1,55 @@
+1
+00:00:00,560 --> 00:00:02,400
+Hello, my name is Andrea Fitzer.
+
+2
+00:00:02,400 --> 00:00:06,200
+I am studying marketing at the University of Texas at Dallas.
+
+3
+00:00:06,200 --> 00:00:09,160
+I am a member of the American Marketing Association
+
+4
+00:00:09,160 --> 00:00:11,280
+and Alpha Kappa's side, both of which
+
+5
+00:00:11,280 --> 00:00:14,720
+are dedicated to shaping future business leaders.
+
+6
+00:00:14,720 --> 00:00:17,000
+I hope to incorporate my business knowledge
+
+7
+00:00:17,000 --> 00:00:21,440
+into consumer trend analysis and strengthening relationships
+
+8
+00:00:21,440 --> 00:00:24,400
+among consumers, as well as other companies.
+
+9
+00:00:24,400 --> 00:00:27,160
+I am savvy, social, and principled,
+
+10
+00:00:27,160 --> 00:00:30,680
+and have exquisite interpersonal communication skills.
+
+11
+00:00:30,680 --> 00:00:33,320
+I know that I can be an asset in any company
+
+12
+00:00:33,320 --> 00:00:36,380
+and or situation, and I hope that you'll consider me
+
+13
+00:00:36,380 --> 00:00:38,680
+for an internship or job opportunity.
+
+14
+00:00:38,680 --> 00:00:40,200
+Thank you so much.
