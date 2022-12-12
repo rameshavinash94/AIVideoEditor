@@ -21,6 +21,7 @@ Transcription helps you convert recorded speech to text.Transcription, or transc
 **OpenAI whisper:**
 Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours of multilingual and multitask supervised data collected from the web
 
+**SNIPPET**
 <img width="834" alt="Screen Shot 2022-12-12 at 1 20 54 AM" src="https://user-images.githubusercontent.com/87649563/207008408-fca8fe5c-9309-45fe-b19e-5370da7b71ad.png">
 
 - **STABLIZE TIMESTAMP AND GENERATE WORD TIMESTAMPS**:
@@ -47,6 +48,7 @@ The second aims at grouping together speech segments on the basis of speaker cha
 COLAB: https://github.com/rameshavinash94/AIVideoEditor/blob/main/colabs/Speaker_Diarization.ipynb
 We can automatically detect the number of speakers in your audio file, and each word in the transcription text can be associated with its speaker
 
+**SNIPPET**
 <img width="764" alt="Screen Shot 2022-12-12 at 1 25 44 AM" src="https://user-images.githubusercontent.com/87649563/207009561-709f6724-2372-4d16-a1fc-813855e99c7e.png">
 
 **FILE:** https://github.com/rameshavinash94/AIVideoEditor/blob/main/Artifacts/diarization_stats.txt
@@ -71,6 +73,7 @@ COLAB:https://github.com/rameshavinash94/AIVideoEditor/blob/main/colabs/Video_ed
 In this feature, the portion of the video which contains sensitive personal information is removed as per the user’s request of type of information, which can be name, occupation, email address or phone number.
 Here, if the video contains any sensitive perforation information, which user doesn’t want , then, he can select the input information type and the information will be redacted in the new generated video.
 
+**SNIPPET**
 <img width="809" alt="Screen Shot 2022-12-12 at 1 27 30 AM" src="https://user-images.githubusercontent.com/87649563/207009912-7eeb95ae-42a4-497f-abdc-bba43e6edd8a.png">
 
 **UPLOADED VIDEO**
@@ -87,12 +90,14 @@ With Summarization, we can generate a single abstractive summary of entire audio
 With Topic Detection,  we can label the topics that are spoken in your audio/video files. The predicted topic labels follow the standardized IAB Taxonomy, which makes them suitable for Contextual Targeting use cases. This API can predict the topic names among 698 different topics.
 With Content Safety Detection, we can detect if any of the following sensitive content is spoken in your audio/video files, and pinpoint exactly when and what was spoken:
 
+**SNIPPET**
 <img width="521" alt="Screen Shot 2022-12-12 at 1 32 36 AM" src="https://user-images.githubusercontent.com/87649563/207011015-93490c0e-53d5-4db2-955c-7db518228ca9.png">
 
 
 **STREAMLIT**
 Streamlit is an open source app framework in Python language. It helps us create web apps for data science and machine learning in a short time.
 
+**SNIPPET**
 <img width="1326" alt="Screen Shot 2022-12-12 at 1 33 41 AM" src="https://user-images.githubusercontent.com/87649563/207011165-c2013c35-ea0b-4b4f-a6a5-eef3b7710ec3.png">
 
 
