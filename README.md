@@ -11,25 +11,61 @@ Additionally, it may enable transcription to be done more quickly and easily tha
 As a solution to the aforementioned problem statement, we propose in this project an all-in-one collaborative AI audio and video editing application that is as simple to use as editing a Google Doc based on text extracted from transcription. Even inexperienced users with no editing skills can edit with AI like a pro with this approach. Our proposed AI tool would offer fantastic features such as automatic transcription from audio, the ability to remove filler words with the click of a button,which makes editing your recorded audio as simple as typing, and the addition of speaker labels. Our solution entails identifying and comprehending all available cutting-edge state-of-the-art(SOTA) models like OPenAI whisper and attempting transfer learning for real-time voice cloning from existing text-speech models in research, and developing an end-to-end ML product for our solution domain.
 
 
-**MODULES**
+## **MODULES**
 
-- SPEECH TO TEXT ( TRANSCRIBE )  - OPENAI WHISPER MODEL : https://github.com/openai/whisper
+- **SPEECH TO TEXT ( TRANSCRIBE )**  - OPENAI WHISPER MODEL : https://github.com/openai/whisper
+Speech recognition is an interdisciplinary subfield of computer science and computational linguistics that develops methodologies and technologies that enable the recognition and translation of spoken language into text by computers with the main benefit of searchability.
 
-- STABLIZE TIMESTAMP AND GENERATE WORD TIMESTAMPS  
+Transcription helps you convert recorded speech to text.Transcription, or transcribing as it is often referred to, is the process of converting speech from an audio or video recording into text.Transcription entails more than just listening to recordings.After the transcript is generated, we are also stabilizing the word timestamps  for various other features.
+
+**OpenAI whisper:**
+Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours of multilingual and multitask supervised data collected from the web
+
+
+- **STABLIZE TIMESTAMP AND GENERATE WORD TIMESTAMPS**:
+https://openai.com/blog/whisper/ only mentions "phrase-level timestamps",we infer from it that word-level timestamps are not available.
+Getting word-level timestamps are not directly supported, but it could be possible using the predicted distribution over the timestamp tokens or the cross-attention weights.
+Reference: https://github.com/jianfch/stable-ts
 
 COLAB: https://github.com/rameshavinash94/AIVideoEditor/blob/main/colabs/Transcription_%26_stabilizing_word_timestamps.ipynb
 
-- FILLER WORD REMOVAL - Python Moviepy and Word TImestamps
+- **FILLER WORD REMOVAL** - Python Moviepy and Word TImestamps
 COLAB: https://github.com/rameshavinash94/AIVideoEditor/blob/main/colabs/Filler_words_removal.ipynb
+The some list of Filler Words that our application will be able to clip off from the video are:
+"um"
+"uh"
+"hmm"
+"mhm"
+"uh huh"
 
-- SPEAKER DIARISATION - OPENAI WHISPER WITH PYANNOTATE
+- **SPEAKER DIARISATION** - OPENAI WHISPER WITH PYANNOTATE
+Speaker diarization is a combination of speaker segmentation and speaker clustering.The first aims at finding speaker change points in an audio stream.
+The second aims at grouping together speech segments on the basis of speaker characteristics.
+
 COLAB: https://github.com/rameshavinash94/AIVideoEditor/blob/main/colabs/Speaker_Diarization.ipynb
+We can automatically detect the number of speakers in your audio file, and each word in the transcription text can be associated with its speaker
 
--VIDEO EDITOR CAPABILITIES. 
+Speakers will be labeled as Speaker 0, Speaker 1, etc.
+
+
+-**VIDEO EDITOR CAPABILITIES**. 
+Try out various video editing capabilities like trimming, watermarking, sub clipping, silent parts removal etc..
 
 COLAB:https://github.com/rameshavinash94/AIVideoEditor/blob/main/colabs/Video_editing_functionalities(Remove_Silent_Parts_Video%2Ctrimming%2Ccutting_videos).ipynb
 
-- PII REDACTION , CONTENT ANALYSIS AND OTHER MODUES ALL ARE INTEGRATING WITH STREAMLTI APPLICATION
+- **PII REDACTION , CONTENT ANALYSIS AND OTHER MODUES ALL ARE INTEGRATING WITH STREAMLTI APPLICATION**
+
+**PII**: Personally Identifiable Information
+In this feature, the portion of the video which contains sensitive personal information is removed as per the user’s request of type of information, which can be name, occupation, email address or phone number.
+Here, if the video contains any sensitive perforation information, which user doesn’t want , then, he can select the input information type and the information will be redacted in the new generated video.
+
+**Content Analyzer**:
+With Summarization, we can generate a single abstractive summary of entire audio files submitted for transcription.
+With Topic Detection,  we can label the topics that are spoken in your audio/video files. The predicted topic labels follow the standardized IAB Taxonomy, which makes them suitable for Contextual Targeting use cases. This API can predict the topic names among 698 different topics.
+With Content Safety Detection, we can detect if any of the following sensitive content is spoken in your audio/video files, and pinpoint exactly when and what was spoken:
+
+**STREAMLIT**
+Streamlit is an open source app framework in Python language. It helps us create web apps for data science and machine learning in a short time.
 
 COLAB: https://github.com/rameshavinash94/AIVideoEditor/blob/main/colabs/Streamlit_Application.ipynb
 
