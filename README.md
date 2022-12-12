@@ -22,6 +22,7 @@ Transcription helps you convert recorded speech to text.Transcription, or transc
 Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours of multilingual and multitask supervised data collected from the web
 
 **SNIPPET**
+
 <img width="834" alt="Screen Shot 2022-12-12 at 1 20 54 AM" src="https://user-images.githubusercontent.com/87649563/207008408-fca8fe5c-9309-45fe-b19e-5370da7b71ad.png">
 
 - **STABLIZE TIMESTAMP AND GENERATE WORD TIMESTAMPS**:
@@ -74,6 +75,7 @@ In this feature, the portion of the video which contains sensitive personal info
 Here, if the video contains any sensitive perforation information, which user doesn’t want , then, he can select the input information type and the information will be redacted in the new generated video.
 
 **SNIPPET**
+
 <img width="809" alt="Screen Shot 2022-12-12 at 1 27 30 AM" src="https://user-images.githubusercontent.com/87649563/207009912-7eeb95ae-42a4-497f-abdc-bba43e6edd8a.png">
 
 **UPLOADED VIDEO**
@@ -91,6 +93,7 @@ With Topic Detection,  we can label the topics that are spoken in your audio/vid
 With Content Safety Detection, we can detect if any of the following sensitive content is spoken in your audio/video files, and pinpoint exactly when and what was spoken:
 
 **SNIPPET**
+
 <img width="521" alt="Screen Shot 2022-12-12 at 1 32 36 AM" src="https://user-images.githubusercontent.com/87649563/207011015-93490c0e-53d5-4db2-955c-7db518228ca9.png">
 
 
@@ -98,6 +101,7 @@ With Content Safety Detection, we can detect if any of the following sensitive c
 Streamlit is an open source app framework in Python language. It helps us create web apps for data science and machine learning in a short time.
 
 **SNIPPET**
+
 <img width="1326" alt="Screen Shot 2022-12-12 at 1 33 41 AM" src="https://user-images.githubusercontent.com/87649563/207011165-c2013c35-ea0b-4b4f-a6a5-eef3b7710ec3.png">
 
 
@@ -118,7 +122,6 @@ Deployment Repo: https://huggingface.co/spaces/AvinashRamesh23/AIEditor/tree/mai
 
 ## TO RUN THE APPLICATION IN LOCALHOST RUN THE STREAMLIT COLAB UNDER COLAB FOLDER. It has all requirements to install at the top.
 COLAB: https://github.com/rameshavinash94/AIVideoEditor/blob/main/colabs/Streamlit_Application.ipynb
-
 
 
 ## TEAM PRESENTATION VIDEO:
