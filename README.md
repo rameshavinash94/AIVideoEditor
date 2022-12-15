@@ -111,7 +111,9 @@ Main App File : https://github.com/rameshavinash94/AIVideoEditor/blob/main/deplo
 
 Requirements : https://github.com/rameshavinash94/AIVideoEditor/blob/main/deployment_files/requirements.txt
 
-Team Project report Link: https://docs.google.com/document/d/1GxQFaz1FvPdZohkQL56vVRqTUAU-Sk7ix_6CRbf05eo/edit#
+Team Project report Link(Google Doc): https://docs.google.com/document/d/1GxQFaz1FvPdZohkQL56vVRqTUAU-Sk7ix_6CRbf05eo/edit#
+
+Team Project report (Github Link): https://github.com/rameshavinash94/AIVideoEditor/blob/main/Project%20Report.docx
 
 ## DEPLOYMENT LINK:
 Deployment url: https://huggingface.co/spaces/AvinashRamesh23/AIEditor
