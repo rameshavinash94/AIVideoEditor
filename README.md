@@ -104,6 +104,13 @@ Streamlit is an open source app framework in Python language. It helps us create
 
 <img width="1326" alt="Screen Shot 2022-12-12 at 1 33 41 AM" src="https://user-images.githubusercontent.com/87649563/207011165-c2013c35-ea0b-4b4f-a6a5-eef3b7710ec3.png">
 
+## **MLOps Architecture** 
+
+Here, we studied several MLOps architecture for various different projects and performed literature survey for the same. Thereafter, we came across the MLOps architecture given by Vertex.AI ,which we have tried to follow during the entire duration of the project.
+
+For the proof of concepts, we used many datasets like LibreSpeech and MoviePy dataset to perform Proof of Concepts (POCs) for various different features like speech-to-text transcription, anad attaching word timestamps. We have tested several pre-trained models like OpenAI whisper and Descrypt APIs for various services and found that OpenAI whisper gives the best accuracy. As we are using pretrained models, we do need to retrain the model  continuously. Thereafter, we have used streamlit application for front-end development. Lastly, we created a Docker Image for the source code and thereafter, deployed the entire application on HuggingFace, so that any user  can access the project and perform various operations in their audio/video input.
+
+
 ## INDIVIDUAL PROJECT CONTRIBUTION:
 
 Avinash Ramesh: I started working on the different AI services like content Analysis and Personally Identifiable Information (PII) redactation.For all those features, I tested different state of the art models for these features and finalized the pretrained model as per its performance and accuracy. I also performed the  worked on the Proof of Concepts (POCs) of integrating all AI services and testing out all the functionality together and see how it works using a simple streamline application.
