@@ -110,19 +110,6 @@ Here, we studied several MLOps architecture for various different projects and p
 
 For the proof of concepts, we used many datasets like LibreSpeech and MoviePy dataset to perform Proof of Concepts (POCs) for various different features like speech-to-text transcription, anad attaching word timestamps. We have tested several pre-trained models like OpenAI whisper and Descrypt APIs for various services and found that OpenAI whisper gives the best accuracy. As we are using pretrained models, we do need to retrain the model  continuously. Thereafter, we have used streamlit application for front-end development. Lastly, we created a Docker Image for the source code and thereafter, deployed the entire application on HuggingFace, so that any user  can access the project and perform various operations in their audio/video input.
 
-
-## INDIVIDUAL PROJECT CONTRIBUTION:
-
-Avinash Ramesh: I started working on the different AI services like content Analysis and Personally Identifiable Information (PII) redactation.For all those features, I tested different state of the art models for these features and finalized the pretrained model as per its performance and accuracy. I also performed the  worked on the Proof of Concepts (POCs) of integrating all AI services and testing out all the functionality together and see how it works using a simple streamline application.
-
-
-Nevil Shah:I was entrusted with the responsibility to generate audio/video transcripts from an audio/video and try various state of the art models for audio/video transcription and determine its accuracy to the original content. First and Foremost,I performed the proof of concept for various models like openAI whisper and descrypt APIs and found that openAI whisper model worked the best. Firstly,after saving the live recorded input file, the transcript for that input is generated.I also tried the same process for different types of audio with regards to speed of speech, noise variation and the tones. Thereafter,I attached timestamps to every word in the generated transcript.Lastly,  I added speaker labels to each of the different voices in the audio file. 
-
-
-Yash Kamtekar: I developed the PoC of filler word removal service on click of a single button. This feature works audio/video file that is either recorded or a YouTube video. It extracts the audio from the file and then generates the transcripts after which it attaches timestamp to these transcripts for further processing. The generated output from the transcription service is given to the Open Whisper model which  has been given a small set of filler words. The model prints the filler word and it’s duration as per the audio generated from step 2. Using moviepy library of python and the output of the model the audio files are merged to generate the output without the filler words.
-
-
-
 COLAB: https://github.com/rameshavinash94/AIVideoEditor/blob/main/colabs/Streamlit_Application.ipynb
 
 Main App File : https://github.com/rameshavinash94/AIVideoEditor/blob/main/deployment_files/app.py
